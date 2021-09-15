@@ -1,69 +1,29 @@
-//C실습 과제4
-
-//어떤 주어진 일자(y년 m월 d의 다음 날을 구하는 프로그램
-// 입출력 예시  2020 9 15 >> 2020 9 16/ 2019 2 28 >> 2019 3 1 
+/*문제4) 한 개의 정수 값(년도)를 입력으로 받아,
+윤년인지 여부를 판단하는 프로그램을 작성하시오.
+-(참고) 윤년(leap year) 여부 판단
+?    4의 배수이면 윤년
+?    100의 배수이면 윤년이 아님
+?    400의 배수이면 윤년*/
 
 #include <stdio.h>
 
 int main(void){
 	
-	int year, month, day;
-	int endDay; //각 월의 끝날을 저장할 공간  
+	int year, isIt;
 	
-	printf("년 월 일을 입력해주세요 : ");
-	scanf("%d %d %d", &year, &month, &day);
+	printf("year? : ");
+	scanf("%d", &year);
 	
-	
-	switch (month){ //각 월의 마지막날을 정해줌  
-		
-		case 2 :  if(year%4 == 0 && year%100 != 100){ //윤년판별 
-					  endDay = 29;
-				  }else{
-					  if(year%400 == 0){
-						  endDay = 29;
-					  }
-				  	  endDay = 28;
-			  	  }
-				  break;
-			
-		case 4 :
-		case 6 :
-		case 9 :
-		case 11 : endDay = 30;
-				  break;
-		
-		default : endDay = 31;
-				  break;
+	if(year%4 == 0 && year%100 != 0){ //4의배수면서 100의 배수는 아닌 것 = 윤년  
+		isIt = 1;
+	}else if(year%400 == 0){ //400의 배수 = 윤년  
+		isIt = 1;
+	}else{ 
+		isIt = 0;
 	}
 	
+	printf("%d", isIt); //결과 출력  
 	
-	if( month == 12 && day== 31 ){ //연말일경우 년도 증가  
-		year += 1;
-		month = 1;
-		day = 1;
-		
-		printf("\n다음날 : ");
-		printf("%d %d %d", year, month, day);
-		
-	}else{
-		
-		if( day == endDay){ //월말일 경우  
-			month += 1;
-			day = 1;
-			printf("\n다음날 : ");
-			printf("%d %d %d", year, month, day);
 	
-		}else{ 
-			if(day > endDay || month > 12){ //바르지 않은 날짜를 입력시  
-				printf("잘못 입력하셨습니다.");
-			}else{ //올바른 날짜를 입력시 날짜를 +1  
-				day += 1;
-				printf("\n다음날 : ");
-				printf("%d %d %d", year, month, day);
-			}	
-			
-		}		
-		
-	}	
 	return 0;
 }
