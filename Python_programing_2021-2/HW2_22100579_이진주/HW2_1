@@ -1,0 +1,13 @@
+#두 개의 정수를 입력 받아서, 두 정수를 포함하여 그 사이에 존재하는 정수들의 합을 계산하여 출력하는 프로그램을 작성하시오. 
+#예를 들어서 -2과 3이 입력되면 -2 + -1 + 0 + 1 + 2 + 3 = 3 이라고 출력한다.
+
+from typing import MutableMapping
+
+
+fstNum = input("첫번째 숫자를 입력하시오 : ")
+sndNum = input("두번째 숫자를 입력하시오 : ")
+
+plusNum = int(fstNum) + int(sndNum)
+mtpNum = int(fstNum) * int(sndNum)
+
+print('더한 결과는', plusNum, '이고, 곱한 결과는', mtpNum, '입니다.');
