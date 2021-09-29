@@ -10,17 +10,17 @@
 # Below 60 >> F, Fail
 
 
-score = float(input(">>> Input your score  : "))
+score = float(input(">>> Input your score  : ")) #점수와 평가방식 입력 
 kind = input(">>> Input Letter(L) or PF(PF) : ")
 
-if kind == 'PF' :
+if kind == 'PF' : #PF일 경우 성적산출 
     if score >= 90 :
         grade = 'PD(Pass with Distinction)'
     elif score >= 60 :
         grade = 'Pass'
     else :
         grade = 'Fail'
-elif kind == 'L' or kind == 'Letter' :
+elif kind == 'L' or kind == 'Letter' : #Letter Grade일 경우 성적산출 
     if score >= 90 :
         grade = 'A'
     elif score >= 80 :
@@ -32,7 +32,7 @@ elif kind == 'L' or kind == 'Letter' :
     else :
         grade = 'F'
 
-print("Your grade is ", grade)
+print("Your grade is ", grade) #성적 출력 
 
 
 

@@ -22,4 +22,4 @@ else : #정순
             print(" + ", end='')
         sum = sum+i
 
-print(' = ', sum)
+print(' = ', sum) #결과출력 
