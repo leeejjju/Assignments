@@ -17,18 +17,51 @@ c. 명사가 “s”, “x”, “z”, “ch”, “sh” 로 끝나면, “es�
 d. 명사가 “us” 로 끝나면, “us”를 제외하고 “i”를 붙인다.
 
 e. 위의 4가지 경우가 아니면 “s”를 붙인다.
+
+
 '''
 
-word = [‘apple’, ‘axes’, ‘book’, ‘box’, ‘buzz’, ‘cat’, ‘cantus’, ‘church’, ‘dish’, ‘knife’, ‘lady’, ‘leaf’,  ‘pitch’, ‘stimulus’, ‘taxi’, ‘wish’, ‘wolf’ ]
+word = ['apple', 'axes', 'book', 'box', 'buzz', 'cat', 'cantus', 'church', 'dish', 'knife', 'lady', 'leaf',  'pitch', 'stimulus', 'taxi', 'wish', 'wolf' ]
 
 
 
-plural = []
+plural = list()
 
-
-
-
-for i in range(len(plural)) :
+for one in word :
     
-    print(plural[i], ' ')
+    if one[-1] == 'y' :
+        one = one. replace('y', 'ies')
+        
+    elif one[-1] == 'f':
+        one = one. replace('f', 'ves') 
+
+    elif one[-1] == 'e' and one[-2] == 'f' :
+        one = one. replace('fe', 'ves') 
+        
+    elif one[-1] == 's' or one[-1] == 'x' or one[-1] == 'z' or (one[-1] == 'h' and (one[-2] == 'c' or one[-2] == 's')):
+        one += 'es'
+
+    elif one[-1] == 's' and one[-2] == 'u':
+        one = one. replace('us', 'i')
+
+    else :
+        one += 's'
+
+    #print(one)
+        
+
+    plural.append(one)
+        
+    
+
+
+for i in plural :
+    
+    print(i)
+
+
+
+
+
+
     
