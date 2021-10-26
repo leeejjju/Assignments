@@ -23,9 +23,32 @@ O (Oxygen)   S (Sulfur)   C (Carbon)   H (Hydrogen)   N (Nitrogen)
 
 ================================
 
-화학식을 입력하시오: CH2OOH
+화학식을 입력하시오: CH2OOH 
 
-                    H2OOH의 분자량은 47.03362'''
+                    CH2OOH의 분자량은 47.03362'''
 
 
+chemi = input("화학식을 입력하시오: ")           
+sum = 0 #분자량을 계산할 공간 
+
+alpha = ['O', 'S', 'C', 'H', 'N'] #원소기호 리스트 
+val = [15.9994, 32.066, 12.011, 1.00794, 14.00674] #원소기호와 인덱스로 매칭되는 분자량 
+num = 1 #이전이 숫자였을 경우 그 값 저장
+
+
+
+for i in range(1, len(chemi)) :
+    if chemi[i].isalpha() :
+        if chemi[i-1].isalpha() :
+           for j in range(5) :
+               if chemi[i-1] == alpha[j] :
+                   sum = sum + val[j]
+    else :
+        for j in range(5) :
+            if chemi[i-1] == alpha[j] :
+                num = int(chemi[i])
+                sum = sum + val[j]* num
+
+print(chemi, '의 분자량은', sum)
+            
 
