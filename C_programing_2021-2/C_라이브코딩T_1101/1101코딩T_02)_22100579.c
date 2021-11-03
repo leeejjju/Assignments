@@ -20,7 +20,7 @@ int main(void){
     count[i] = 1;
   }
 
-  for(i = 0; i < size; i++){
+  for(i = 0; i < size; i++){ //중복값이 있으면 그놈 카운트 증가, 해당회차탈출  
     for(j = i+1; j < size; j++){
       if(num[i] == num[j]){
         count[i] ++;
@@ -29,7 +29,7 @@ int main(void){
     }
   }
 
-  for(i = 0; i < size; i++){
+  for(i = 0; i < size; i++){ //누적된 카운트들 중 최고값 찾기  
     if(max < count[i]){
       max = count[i];
       max_index = i;
