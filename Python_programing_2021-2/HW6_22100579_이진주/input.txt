@@ -1,0 +1,5 @@
+write a function that reads in a text file and prints and
+prints the total number of words,
+number of letters excluding spaces,
+number of letters including spaces,
+and the number of lines found in the file.
