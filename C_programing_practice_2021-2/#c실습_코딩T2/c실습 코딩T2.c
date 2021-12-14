@@ -7,6 +7,7 @@
 #include <time.h>
 
 char kname[2][10] = {"Grade", "P/F"}; // 평가방식 표현 문자열
+int i, j;
 // 이미 구현된 함수
 int loadData(char names[50][30], int units[50], int kinds[50]); // 파일에서 과목 목록을 읽어온다.
 void printAllClasses(char names[50][30], int units[50], int kinds[50], int size); // 전체 과목 목록을 출력한다.
@@ -54,7 +55,7 @@ int main(void) {
 		}
 		else if(no == 2){
 			printf("2.학점입력\n");
-			for(int i=0; i<5; i++){
+			for(i=0; i<5; i++){
 				int classno = myclass[i];
 				printf("%d. %s [%d학점 - %s] ", i+1, cnames[classno], units[classno], kname[kinds[classno]-1]);
 				if(kinds[classno]==1){
@@ -73,7 +74,7 @@ int main(void) {
 			char str[30];
 			scanf("%s", str);
 			int count=0;
-			for(int i=0; i<5; i++){
+			for(i=0; i<5; i++){
 				int classno = myclass[i];
 				if(strstr(cnames[classno], str)){
 					printf("%s [%d학점] 성적 : %s\n", cnames[classno], units[classno], mygrades[i]);
@@ -112,7 +113,7 @@ int loadData(char names[50][30], int units[50], int kinds[50]){
 
 void printAllClasses(char names[50][30], int units[50], int kinds[50], int size){
 	printf("전체 과목\n");
-	for(int i=0; i<size; i++){
+	for(i=0; i<size; i++){
 		printf("%d. %s [%d학점 - %s]\n",i+1, names[i], units[i], kname[kinds[i]-1]);
 	}
 }
@@ -124,7 +125,7 @@ void printMyClasses(int my[5], char names[50][30], int units[50], int kinds[50])
   //0. 내 수강과목\n'' 출력 
   printf("내 수강과목\n");
   //1. 이하를 다섯번 반복...
-  for(int i = 0; i < 5; i++){
+  for(i = 0; i < 5; i++){
     //1-1 (순서번호). (과목이름) [(학점수)학점 - (평가방식)]\n)
     printf("%d. %s [%d학점 - %s]\n", i+1, names[my[i]], units[my[i]], kname[kinds[my[i]]-1]);
   }
@@ -162,7 +163,7 @@ void selectMy5Classes(int my[5], int range){
     //1-1 my배열에 rand함수를 사용해서 (특정 범위지정) 값을 하나 입력받습니다.
     my[count] = rand()%(range);
     //1-2 방금 입력받은 값이 역대 값들과 중복되는지를 체크(for))
-    for(int i; i < count; i++){
+    for(i = 0; i < count; i++){
       if(count != 0 && my[i] == my[count]){
         joong = 1;
         break;
@@ -214,7 +215,7 @@ void saveReport(int my[5], char myg[5][10], char names[50][30], int units[50], i
     fprintf(file, "성적표\n");
 
     //2-2 이하 5번 반복...
-    for(int i = 0; i < 5; i++){
+    for( i = 0; i < 5; i++){
       //2-2-1 "(순서). (과목이름) [(학점수)학점 - (평가방식)] - (성적)"
       fprintf(file, "%d. %s [%d학점 - %s] - %s\n", i+1, names[my[i]], units[my[i]], kname[kinds[my[i]]-1], myg[i]);
       //2-2-2 전체학점 += (학점수)

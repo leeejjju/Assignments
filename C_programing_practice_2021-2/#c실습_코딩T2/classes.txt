@@ -1,0 +1,17 @@
+CProgramming 3 1
+CProgrammingLab 1 2
+JavaProgramming 2 1
+OpenSourceLab 1 1
+PracticalProject 3 2
+CreationEvolution 2 2
+LogicDesign 2 1
+WorldView 3 2
+CapstoneDesign 4 2
+OperatingSystem 3 1
+Database 3 1
+OODP 2 1
+BibleHistory 3 2
+Algorithm 2 1
+DataStructure 2 1
+ComputerVision 1 1
+Calculus 3 2

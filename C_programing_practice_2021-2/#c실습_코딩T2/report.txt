@@ -1,0 +1,8 @@
+성적표
+1. OpenSourceLab [1학점 - Grade] - A+
+2. BibleHistory [3학점 - P/F] - P
+3. CProgramming [3학점 - Grade] - A+
+4. CreationEvolution [2학점 - P/F] - P
+5. CapstoneDesign [4학점 - P/F] - P
+취득 학점 : 13 / 13
+평점 평균 : 4.50
