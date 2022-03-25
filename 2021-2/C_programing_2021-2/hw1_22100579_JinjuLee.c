@@ -13,7 +13,6 @@ int main(void){
     fah =(cel * 1.800) + 32.00;
 
     printf("%f ¢µ", fah);
-
-
+    
     return 0;
 }
