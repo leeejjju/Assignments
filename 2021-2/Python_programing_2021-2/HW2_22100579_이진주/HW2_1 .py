@@ -12,7 +12,7 @@ if num1 > num2 : #역순
     for i in range( num1, num2-1, -1) :
         print(i, end = '')
         if i != num2 :
-                print(" + ", end='')
+            print(" + ", end='')
         sum = sum+i
             
 else : #정순 
