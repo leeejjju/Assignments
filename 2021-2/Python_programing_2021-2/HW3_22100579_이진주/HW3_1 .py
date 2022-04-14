@@ -21,6 +21,15 @@ e. 위의 4가지 경우가 아니면 “s”를 붙인다.
 
 '''
 
+
+
+
+
+
+
+
+
+
 word = ['apple', 'axes', 'book', 'box', 'buzz', 'cat', 'cantus', 'church', 'dish', 'knife', 'lady', 'leaf',  'pitch', 'stimulus', 'taxi', 'wish', 'wolf' ]
 
 
