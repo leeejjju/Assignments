@@ -7,7 +7,7 @@ using namespace std;
 //데이타구조 HW09
 //22100579 이진주
 /*
-강의에서 설명한 구조의 link  ed list를 구현하고, 아래의 main function의 의도대로 동작하도록
+강의에서 설명한 구조의 linked list를 구현하고, 아래의 main function의 의도대로 동작하도록
 관련 function을 작성하시오. (강의 교재 내용 참조)
 */
 
