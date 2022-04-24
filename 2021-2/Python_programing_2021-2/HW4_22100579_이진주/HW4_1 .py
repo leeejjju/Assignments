@@ -37,18 +37,18 @@ num = 1 #이전이 숫자였을 경우 그 값 저장
 
 
 
-for i in range(1, len(chemi)) :
-    if chemi[i].isalpha() :
-        if chemi[i-1].isalpha() :
-           for j in range(5) :
+for i in range(1, len(chemi)) : #입력받은 화학식을 인덱스 1(이전 원소와 비교할 것이므로)부터 끝까지 훑기 
+    if chemi[i].isalpha() : #알파벳이면
+        if chemi[i-1].isalpha() : #이전원소가 알파벳이면(그 원소는 1개 있다는 의미이므로)
+           for j in range(5) : #그친구가 어떤 알파벳이냐에 따라 적당한 값을 더해주기 
                if chemi[i-1] == alpha[j] :
                    sum = sum + val[j]
-    else :
+    else : #알파벳이 아니면(숫자겠지)
         for j in range(5) :
-            if chemi[i-1] == alpha[j] :
+            if chemi[i-1] == alpha[j] : #직전 원소(알파벳이겠지)가 뭐냐에 따라 적당한 값을 해당 숫자와 곱하여 더해주기 
                 num = int(chemi[i])
                 sum = sum + val[j]* num
 
-print(chemi, '의 분자량은', sum)
+print(chemi, '의 분자량은', sum) #총 누적된 분자량 출력 
             
 
