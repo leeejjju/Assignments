@@ -3,7 +3,6 @@ using namespace std;
 //#define JUMGUM printf("%d단계 점검\n", jum++);
 #define JUMGUM jum++;
 
-
 class node{
 
     public:
@@ -83,6 +82,7 @@ int main(){
     cout << a.num_nodes()<< " : " << a.score_sum() << "\n";  // 최종 점검       
     JUMGUM
 
+    printf("this is edited with vim plugin :)\n");
     return 0;
   }
 
@@ -114,6 +114,7 @@ int main(){
     void my_list:: add_to_tail(node x){
         node* t = new node(); //공간 확보하고 데이터 이동
         *t = x;
+        
 
         t->link = NULL; //연결작업. 마지막 원소이니 링크는 null과 연결해주고
         tail->link = t; //원래의 마지막놈이 얘를 가리키도록 조정하고
