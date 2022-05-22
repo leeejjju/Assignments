@@ -2,12 +2,17 @@
 using namespace std;
 
 
+
 int main(){
 
-    char m[16] = {'2', '0', '2', '2', '-', '1', 
-              '\n', 'O', 'S', 'S', 'L', 
-              '\0', 'E', 'X', 'A', 'M'};
-    printf("The message is %s\n", m);
+    string a = "30";
+    string c = "20";
+    //int b = stoi(a);
+    string b;
+
+    if(a>c) b = a;
+    else b = c;
+    cout << b;
 
 
 

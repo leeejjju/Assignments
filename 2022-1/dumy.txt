@@ -1,0 +1,25 @@
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="DESKTOP-0IJBIJO 2973"
+    psk="48La76&7"
+    key_mgmt=WPA-PSK
+}
+
+
+network={
+    ssid="NTH414"
+    psk="cseenth414"
+    key_mgmt=WPA-PSK
+}
+
+network={
+
+	ssid="HGU_WLAN"
+	key_mgmt=WPA2-EAP
+	eap=PEAP
+	identity="22100579"
+	password="Dlwlswn02027@"
+	
+}

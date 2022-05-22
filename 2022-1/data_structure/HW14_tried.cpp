@@ -5,19 +5,9 @@ using namespace std;
 //22100579 이진주
 /*Binary Search Tree 구현 예제
 
-아래와 같은 형식의 Menu-driven program 으로
-
- {전화번호, 생일 외 정보 } 목록을 binary search tree로 구현
-
-(내용과 세부 형식은 자유롭게 구현 할 것)
-
-(Menu 예)
-
-새로운 원소 추가
-원소 조회
-전체 목록 보기
-종료
-  명령 선택 : _     
+delete 연산 추가하려다가 대차게 꼬임
+교수님이 구현하기 더러우니 하지 말라던 이유가 읻엇음.
+한가하면 마저 해보던가......     
 */
 
 
@@ -57,7 +47,7 @@ class bst_tree{
     }
     node search(string key);
     int insert_node(node x); //when failed, return 0
-    //void delete_node(string key);
+    int delete_node(string key); //when failed, return 0
     void show_inorder();
     int getSize();
     bool isEmpty();
@@ -71,6 +61,7 @@ void showInfo();
 void addNewNode(bst_tree *t1);
 void showSelectedNode(bst_tree t1);
 void showAllNodes(bst_tree t1);
+void deletSelectedNode(bst_tree *t1);
 
 
 
@@ -95,6 +86,9 @@ int main(){
             break;
         case 3:
             showAllNodes(t1);
+            break;
+        case 4:
+            deletSelectedNode(&t1);
             break;
         case 0:
             cout << "\nSee you again ;D\n\n";
@@ -127,6 +121,7 @@ void showInfo(){
     printf("1: add new node\n");
     printf("2: search the node\n");
     printf("3: show all nodes\n");
+    printf("4: delete node\n");
     printf("0: exit\n");
     printf("\t\t command: ");
 
@@ -171,6 +166,17 @@ void showSelectedNode(bst_tree t1){
 
 void showAllNodes(bst_tree t1){
   t1.show_inorder();
+}
+
+void deletSelectedNode(bst_tree *t1){
+  string key;
+  
+  cout << "input phone number(key): ";
+  cin >> key;
+  if(t1->delete_node(key) == 0) cout << "please try again :(\n";
+  else cout << "selected node succefully deleted!\n\n";
+
+  
 }
 
 
@@ -233,9 +239,94 @@ int bst_tree:: insert_node(node x){
   //cout << "current size is " << size << endl;
   return 1;
   
-  
 }
-//void delete_node(string key);
+
+int bst_tree:: delete_node(string key){
+  
+  if(isEmpty()){
+    cout << "\n[error: tree is empty]\n";
+    return 0;
+  } 
+
+  node* pre = NULL;
+  bool isLeft = true; 
+  node* t = root;
+
+  while(1){
+      if(t == NULL){
+          cout << "\n[error: cannot find the node of the key]\n";
+          return 0;
+      } 
+      if(t->phoneNum == key) break;
+      else if((t->phoneNum) > key){
+        pre = t;
+        isLeft = true;
+        t = t->left;
+      }else{
+        pre = t;
+        isLeft = false;
+        t = t->right;
+      } 
+  }
+
+
+  //if pre is NULL, that means the founded node is root. 
+  //pre is parent of the node gonna be deleted (t now.)
+
+  cout << "*lets delete the node! " << t->phoneNum << endl;
+  
+  if(t->left == NULL && t->right == NULL){ //simply delete that node
+    cout << "the node has no child.\n";
+    if(pre != NULL){
+      if(isLeft) pre->left = NULL;
+      else pre->right = NULL;
+      t = NULL;
+    }else{
+      root = NULL;
+    }
+  }else if(t->left == NULL){ //replace it as child: link him with right child.
+    cout << "the node has 1 right child.\n";
+    if(pre != NULL){
+      if(isLeft) pre->left = t->right;
+      else pre->right = t->right;
+    }else{
+      root = t->right;
+    }
+    
+  }else if(t->right == NULL){ //replace it as child: link him with right child.
+    cout << "the node has 1 left child.\n";
+    if(pre != NULL){
+      if(isLeft) pre->left = t->left;
+      else pre->right = t->left;
+    }else{
+      root = t->left;
+    }
+    
+  }else{//find the largerst node from left subtree, replace it 
+    cout << "the node has 2 child.\n";
+    node* tmp;
+    for(node* p = t->left; p!= NULL; p = p->right) tmp = p;
+    //when breaked, tmp is gonna be laegest node from left subtree
+    if(pre != NULL){
+      if(isLeft) pre->left = tmp;
+      else pre->right = tmp;
+    }else{
+      root = tmp;
+    }
+
+    if(tmp->left != tmp) tmp->left = t->left;
+    else tmp->left = NULL;
+    tmp->right = t->right;
+    
+  }
+  if(root != NULL) cout << "current root is " << root->phoneNum << endl;
+  else cout << "tree is empty now\n";
+  size--;
+  return 1;
+}
+
+
+
 void bst_tree:: show_inorder(){
   cout << endl;
   inorder_traverse(root);
