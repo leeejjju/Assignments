@@ -1,0 +1,10 @@
+--enable-mysqlnd \
+--with-mysql-sock=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-imap-ssl \
+--with-iconv \
+--enable-gd \
+--with-jpeg \
+--with-libxml \
+--with-openssl
