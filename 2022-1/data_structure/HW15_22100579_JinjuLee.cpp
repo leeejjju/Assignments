@@ -192,7 +192,6 @@ void adjust2(s_record s[], int k, int n){
 
 
 
-
 //merge sort
 void merge_sort(s_record s[], int n){
 

@@ -24,6 +24,8 @@ class node{
     //link
     node* left;
     node* right;
+
+    
     
     void set_data(string newPhoneNum, string newName, string newBirthDay, string newMayjor){
         phoneNum = newPhoneNum;
