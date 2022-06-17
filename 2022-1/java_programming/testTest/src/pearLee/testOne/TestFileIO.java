@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
+import java.nio.file.*;
 
 
 class TestFileIO{
@@ -8,9 +9,12 @@ class TestFileIO{
 
         TestFileIO runner = new TestFileIO();
         //runner.inputFile(args);
-        runner.outputFile(args);
+        //runner.outputFile(args);
         //runner.getFileName();
-        //runner.makeCSVFile();
+        //runner.makeCSVFile(args);
+        runner.mkDir(args);
+        runner.practiceCSV(args);
+        
     }
 
 
@@ -37,7 +41,7 @@ class TestFileIO{
             outputStream.println(i+" : "+line);
         }
         outputStream.close();
-        System.out.println("Those lines were written to"+ fileName);
+        System.out.println("Those lines were written to "+ fileName);
 
     }
 
@@ -93,8 +97,8 @@ class TestFileIO{
     }
 
     //making csv file example
-    public void makeCSVFile(){
-        String filePath = "newCSV.csv";
+    public void makeCSVFile(String[] args){
+        String filePath = args[0] + ".csv";
         File file = null;
         BufferedWriter bw = null;
         String NEWLINE = System.lineSeparator(); // \n
@@ -122,4 +126,64 @@ class TestFileIO{
         }
         
     }
+
+
+    //Lets practice to make csv file!! 
+    public void practiceCSV(String[] args){
+
+        String filePath = args[1] + ".csv";
+
+
+        File file = null;
+        BufferedWriter bw = null;
+        
+
+        try{
+            file = new File(filePath);
+            bw = new BufferedWriter(new FileWriter(file));
+            
+            bw.write("this is test for appliy to java HW5\n");
+            bw.write("hehe\n");
+
+
+            bw.flush();
+            bw.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    }
+
+    
+    public void mkDir(String[] args) {
+        String path = "";
+		
+        if(args[0].contains(":")){
+            path = args[0];
+        }else path = "./"+ args[0];
+         
+
+        File newFile = new File(path);
+        boolean isWorks = false;
+        
+        try{isWorks = newFile.mkdirs();}
+        catch(Exception e){e.getStackTrace();} 
+        
+
+        System.out.println("enterd path is "+ path);
+
+        if (isWorks) {
+            System.out.println("Folder created.");
+        }else{
+            System.out.println("the Folder is already exist.(or something is wrong...)");
+        }
+
+        
+    }
+    
+
+
+
+
 }

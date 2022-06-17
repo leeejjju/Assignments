@@ -18,7 +18,7 @@ class TestHashMap{
 
         /*
         System.out.println(a);
-        for(String name : a.keySet()){ //ì €ì¥ëœ keyê°’ í™•ì¸
+        for(String name : a.keySet()){ //????¥?œ keyê°? ?™•?¸
             System.out.println("[Key]:" + name + " [Value]:" + a.get(name));
         }
         */
