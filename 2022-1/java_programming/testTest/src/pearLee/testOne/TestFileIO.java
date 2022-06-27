@@ -131,7 +131,7 @@ class TestFileIO{
     //Lets practice to make csv file!! 
     public void practiceCSV(String[] args){
 
-        String filePath = args[1] + ".csv";
+        String filePath = args[0] + "/" + args[1] + ".csv";
 
 
         File file = null;
@@ -156,6 +156,7 @@ class TestFileIO{
     }
 
     
+
     public void mkDir(String[] args) {
         String path = "";
 		
