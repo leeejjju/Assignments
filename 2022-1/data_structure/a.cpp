@@ -2,19 +2,10 @@
 using namespace std;
 
 
-
 int main(){
+     printf("hello world!"); 
 
-    string a = "30";
-    string c = "20";
-    //int b = stoi(a);
-    string b;
+      return 0;
+      
 
-    if(a>c) b = a;
-    else b = c;
-    cout << b;
-
-
-
-    return 0;
 }
