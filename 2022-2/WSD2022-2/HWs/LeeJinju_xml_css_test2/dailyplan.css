@@ -1,0 +1,354 @@
+
+
+
+name{
+    display: block;
+    background-color: yellow;
+    width: 280px;
+    height: 50px;
+    margin-left: 50px;
+    box-shadow: 5px 5px 1px blue;
+
+
+    font-size: 18pt;
+    color: blue;
+    text-align: center;
+    text-shadow: 5px 5px 1px red;
+
+
+    border: 3px solid red;
+    
+
+    animation: nameAnimation 4s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes nameAnimation {
+    0%{
+        background-color: yellow;
+        color: red;
+        margin-left: 100px;
+        border: 3px solid red;
+        text-shadow: 5px 5px 1px blue;
+        box-shadow: 10px 10px 2px blue;
+    }
+    50%{
+        background-color: lightgrey;
+        color: blue;
+        margin-left: 300px;
+        border: 3px solid blue;
+        text-shadow: 5px 10px 3px red;
+        box-shadow: 10px 10px 2px orange;
+    }
+    100%{
+        background-color: yellow;
+        color: red;
+        margin-left: 100px;
+        border: 3px solid red;
+        text-shadow: 5px 5px 1px blue;
+        box-shadow: 10px 10px 2px blue;
+    }
+    
+}
+
+
+
+major{
+    display: block;
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 280px;
+    height: 40px;
+    box-shadow: 5px 5px 1px green;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+   
+    text-align: center;
+    font-size: 11pt;
+    font-weight: 800;
+
+    transition: background-color 2s, transform 2s, width 2s, height 2s;
+}
+
+major:hover{
+
+    background-color: lightcyan;
+    width: 320px;
+    height: 70px;
+    font-size: 15pt;
+    font-weight: 800;
+    color: red;
+    border: 1px solid red;
+
+    transform: rotate(360deg);
+
+    box-shadow: 10px 10px 1px blue;
+
+    
+}
+
+
+hobby{
+    display: block;
+    color: green;
+    border: 1px solid black;
+    width: 100px;
+    height: 80px;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 10%;
+
+    margin-left: 50px; 
+    margin-top: 10px;
+    margin-bottom: 210px;
+
+    text-align: center;
+    font-weight: 800;
+
+    animation: hobbyAnimation 10s infinite;
+}
+
+@keyframes hobbyAnimation {
+    0%{
+        background: yellow; 
+        margin-left: 50px; 
+        margin-top: 10px;
+        margin-bottom: 210px;
+        color: blue;
+        height: 80px;
+        border-radius: 0%;
+
+    }25%{
+        background: lightgray; 
+        margin-left: 1000px; 
+        margin-top: 10px;
+        margin-bottom: 190px;
+        color: red;
+        height: 100px;
+        border-radius: 100%;
+    }50%{
+        background: greenyellow; 
+        margin-left: 1000px; 
+        margin-top: 200px;
+        margin-bottom: 0px;
+        color: black;
+        height: 100px;
+        border-radius: 100%;
+    }75%{
+        background: seagreen; 
+        margin-left: 50px; 
+        margin-top: 200px;
+        margin-bottom: 20px;
+        color: purple;
+        height: 80px;
+        border-radius: 0%;
+    }100%{
+        background: yellow; 
+        margin-left: 50px; 
+        margin-top: 10px;
+        margin-bottom: 210px;
+        color: blue;
+        height: 80px;
+        border-radius: 0%;
+    }
+    
+}
+
+Exercise{
+    display: block;
+    position: relative;
+    top: -400px;
+    float: right;
+
+    background-color: rgb(84, 201, 0);
+    width: 280px;
+    height: 50px;
+
+    margin-right: 100px;
+
+    transform: skew(20deg);
+
+
+    border-top: 10px solid purple;
+    border-left: 2px solid purple;
+    border-bottom: 5px solid purple;
+    border-right: 7px solid purple;
+    
+    padding-top: 20px;
+    font-size: 10pt;
+    font-weight: 800;
+    text-align: center;
+}
+
+Exercise:hover{
+    background-color: yellow;
+    color: purple;
+    height: 80px;
+    font-size: 18pt;
+    text-shadow: 4px 4px 1.5px green;
+    transform : skewY(-20deg);
+    border-top: 18px solid blue;
+    border-left: 2px solid blue;
+    border-bottom: 5px solid blue;
+    border-right: 12px solid blue;
+
+}
+
+
+
+MEAL{
+    display: block;
+    position: relative;
+    top: -100px;
+    left: 300px;
+    
+    background-color: lightgrey;
+    width: 260px;
+    height: 40px;
+
+    margin-left: 400px;
+
+    border-top: 5px dotted blue;
+    border-left: 5px solid red;
+    border-bottom: 5px dotted red;
+    border-right: 5px solid blue;
+
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 800;
+
+    animation: mealAnimation 10s infinite;
+
+    
+    transform: rotate(75deg);
+    transform-origin: 20% 40%;
+    transition: width 2s;
+
+}
+
+@keyframes mealAnimation {
+    0%{top:-150px}
+    50%{top:-50px}
+    100%{
+        top:-150px
+    }
+    
+}
+
+MEAL:hover{
+
+    height: 60px;
+    width: 240px;
+    border-width: 0.15cm;
+    transform:rotate(0deg);
+    background-color: aqua;
+    transform: scale(1, 1.5);
+}
+
+
+
+BreakTimeActivity{
+    display: block;
+    font-style: italic;
+    font-weight: 800;
+
+    position: relative;
+
+    background-color: lightgrey;
+    width: 260px;
+    height: 50px;
+
+    margin-left: 100px;
+    border-radius: 0.7cm;
+
+
+
+
+    border-top: 15px solid brown;
+    border-left: 15px solid orangered;
+    border-bottom: 15px solid purple;
+    border-right: 15px solid darkblue;
+
+    padding-top: 30px;
+    font-size: 10pt;
+    
+    
+
+    animation: breakAnimation 4s infinite;
+}
+
+BookReading{
+    display: block;
+    color: blue;
+}
+
+VideoMusic{
+    display: block;
+    color: rgb(17, 159, 230)
+}
+
+@keyframes breakAnimation {
+
+    0%{
+        border-top: 15px solid brown;
+        border-left: 15px solid orangered;
+        border-bottom: 15px solid purple;
+        border-right: 15px solid darkblue;
+
+        transform: scale(1, 1);
+        top: 0px;
+
+    }25%{
+
+        border-top: 15px solid darkblue;
+        border-left: 15px solid brown;
+        border-bottom: 15px solid orangered;
+        border-right: 15px solid purple;
+
+        transform: scale(0.8, 1.2);
+        top: -20px;
+    
+    
+
+    }50%{
+
+        border-top: 15px solid purple;
+        border-left: 15px solid darkblue;
+        border-bottom: 15px solid brown;
+        border-right: 15px solid orangered;
+
+        transform: scale(1.2, 0.8);
+        top: 100px;
+
+    }75%{
+
+        border-top: 15px solid orangered;
+        border-left: 15px solid purple;
+        border-bottom: 15px solid darkblue;
+        border-right: 15px solid brown;
+
+        transform: scale(1.5, 0.6);
+        top: 150px;
+
+    }100%{
+        border-top: 15px solid brown;
+        border-left: 15px solid orangered;
+        border-bottom: 15px solid purple;
+        border-right: 15px solid darkblue;
+
+        transform: scale(1, 1);
+        top: -10px;
+
+
+    }
+    
+}
+
+
+
+
+
+
+
+

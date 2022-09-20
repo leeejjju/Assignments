@@ -1,0 +1,46 @@
+
+thisIsMe{
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20pt;
+}
+
+cd {
+    width: 70%;
+    display: block; 
+    margin-bottom: 30pt;
+    margin-left: 10pt;
+    text-align: left;
+}
+
+FAVORITE_MEAL, EXERCISE_SCHEDULE, STUDY_PLAN, BREAKTIME_ACTIVITIES, APPOINTMENT{
+    display: block; 
+    width: 40%;
+    margin-top: 10pt;
+    margin-left: 20pt;
+    background-color: floralwhite;
+    color: darkgreen;
+}
+
+NAME{
+    background-color: green;
+    color: wheat;
+    font-size: 30pt;
+    margin-left: 20pt;
+}
+
+MAJOR{
+    width: 70%;
+    color: green;
+    font-size: 20px;
+    display: block; 
+    margin-top: 10pt;
+    margin-left: 20pt;
+}
+
+CLUB, GHOST, EB{
+    width: 40%;
+    margin-left: 20pt;
+    display: block; 
+    background-color: wheat;
+}

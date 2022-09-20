@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="euc-kr" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="dailyplan.css"?>
+<PLAN>
+   <name>Eugene Kim</name>
+   <major doubleMajor = "yes"> Computer Science &amp; Theology
+   </major>
+   <hobby> hobby: hiking </hobby>
+   <Exercise InDoorTraining = "Bench Press" OutDoorTraining="runnuing" > 
+      Exercise: Field-Running, Weight Training 
+   </Exercise>
+   <MEAL meat="no" vegetable="yes"> MEAL: Vegetable, Fruit, Fish </MEAL>
+   <BreakTimeActivity day = "Weekend"> 
+   	<BookReading genre = "adventure"> Book : Ben Hur, Spartacus </BookReading>
+   	<VideoMusic> MusicVedeo: Scenic Relation - Greece </VideoMusic> 
+   </BreakTimeActivity>
+</PLAN>

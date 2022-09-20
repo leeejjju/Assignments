@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="xml_css1.css"?>
+<xmlCssDemo>
+<title>
+<name>My First CSS Example</name>
+</title>
+<paragraph>
+<contents>This is a paragraph.</contents> 
+</paragraph>
+</xmlCssDemo>
+

@@ -1,0 +1,18 @@
+title, paragaph1, paragraph2{
+    display: block;
+}
+title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: tomato;
+}
+paragraph1{
+    margin-top: 30px;
+    font-size: 20px;
+    color: dodgerblue;
+}
+paragraph2{
+    margin-top: 30px;
+    font-size: 20px;
+    color: MediumSeaGreen;
+}

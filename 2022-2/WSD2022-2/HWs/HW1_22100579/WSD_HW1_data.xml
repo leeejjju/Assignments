@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="memo1.css"?>
+<thisIsMe gender = "Femle" age = "21">
+	<NAME> &apos;Jinju Lee&apos;</NAME>
+	<MAJOR> CSEE, Computer Science </MAJOR>
+	<CLUB> Im in two club in handong. 
+	<Ghost>GHOST 33</Ghost>
+	<EB>Early Bird</EB>
+	</CLUB>
+	<FAVORITE_MEAL> Every food I can have ^0^ </FAVORITE_MEAL>
+	<Exercise_SCHEDULE> Jogging in the morning! </Exercise_SCHEDULE>
+	<STUDY_PLAN> Class until 18:00, and study for the club till midnight </STUDY_PLAN>
+	<BREAKTIME_ACTIVITIES> Wanna take some nap o&lt;-&lt; </BREAKTIME_ACTIVITIES>
+	<APPOINTMENT>I will have dinner with club members today! </APPOINTMENT>
+</thisIsMe>

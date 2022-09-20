@@ -1,0 +1,16 @@
+xmlCssDemo{
+    background-color: lightblue;
+
+}
+title, paragraph{
+    display: block;
+}
+title{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+paragraph{
+    margin-top: 30px;
+    font-size: 20px;
+}

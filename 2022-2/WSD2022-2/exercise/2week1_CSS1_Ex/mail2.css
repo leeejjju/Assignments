@@ -1,0 +1,24 @@
+receiver, sender, body
+{
+display: block;
+}
+sender
+{
+text-align: right;
+}
+name, contents
+{
+font-weight: bold;
+}
+mail-address
+{
+font-style: italic;
+}
+postscript
+{
+font-style: italic;
+}
+attached-file
+{
+font-style: italic;
+}
