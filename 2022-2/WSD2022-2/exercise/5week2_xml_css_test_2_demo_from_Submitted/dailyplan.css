@@ -1,0 +1,253 @@
+*{
+	display: block;
+}
+
+name {
+	border: 4px solid red;
+	color: red;
+	background-color: yellow;
+	box-shadow: 10px 10px 2px blue;
+	text-shadow: 10px 10px 0px blue;
+	padding: 10px 50px;
+	height: 50px;
+	text-align: center;
+	position: absolute;
+	font-size: 40px;
+}
+
+name {
+	animation: movename 3s infinite;
+	animation-direction: alternate; 
+
+}
+
+@keyframes movename{
+	from{
+		left: 20px;
+	}
+	to{
+		border: 4px solid blue;
+		left: 600px;
+		text-shadow: 15px 15px 2px red;
+		color:blue;
+		background-color: white;
+		box-shadow: 10px 10px 2px orange;
+	}
+}
+
+major{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	border: 2px solid black;
+	background-color: lightgray;
+	box-shadow: 5px 5px 2px green;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	font-weight: bold;
+	transition: all 2s;
+}
+major:hover{
+	font-size: 30px;
+	box-shadow: 5px 10px 2px blue;
+	background-color: white;
+	border: 1px solid red;
+	color: red;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 40px;
+	transform: rotate(360deg);
+}
+
+hobby{
+	position: absolute;
+	font-size: larger;
+	font-weight: bolder;
+	top: 25%;
+	right: 90%;
+	background-color: yellow;
+	border: 1px solid darkgreen;
+	color: blue;
+	width: 100px;
+	height: 75px;
+	text-align: center;
+}
+hobby{
+	animation: movehobby 8s infinite;
+}
+
+@keyframes movehobby{
+	25%{
+		right:10%;
+		top: 25%;
+		height: 100px;
+		border-radius: 50%;
+		color: red;
+		background-color: lightgray;
+	}
+	50%{
+		right: 10%;
+		top: 50%;
+		height: 100px;
+		border-radius: 50%;
+		color: black;
+		background-color: lime;
+	}
+	75%{
+		height: 80px;
+		right: 90%;
+		top: 50%;
+		border-radius: 20%;
+		color: purple;
+		background-color: green;
+	}
+}
+
+Exercise{
+	position: absolute;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color: limegreen;
+	border-top: 10px solid purple;
+	border-left: 2px solid purple;
+	border-bottom: 4px solid purple;
+	border-right: 8px solid purple;
+	transform: skewX(20deg);
+	right: 15px;
+	top: 40px;
+}
+
+Exercise:hover{
+	font-size: larger;
+	border-color: blue;
+	color: purple;
+	text-shadow: 5px 5px 2px green;
+	background-color: yellow;
+	transform: skewY(-20deg);
+	width: 250px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+MEAL{
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	border-top: 5px dashed blue;
+	border-left: 5px solid red;
+	border-bottom: 5px dashed red;
+	border-right: 5px solid blue;
+	width: 300px;
+	padding: 10px;
+	font-weight: bold;
+	background-color: lightgray;
+	transform: rotate(70deg);
+	transition: width 1s;
+}
+MEAL{
+	animation: movemeal 8s infinite;
+
+}
+
+@keyframes movemeal{
+	0%{}
+	50%{top:60%;}
+}
+
+MEAL:hover{
+	transform: rotate(0deg) scaleY(200%);
+	width: 270px;
+	background-color: aqua;
+	text-align: center;
+	font-size: larger;
+}
+
+BreakTimeActivity{
+	bottom: 10%;
+	left: 20px;
+	position: absolute;
+	border-top: 10px solid red;
+	border-right: 10px solid green;
+	border-left: 10px solid orange;
+	border-bottom: 10px solid blue;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: lightgray;
+}
+BreakTimeActivity{
+	animation: moveact 10s infinite;
+
+}
+
+@keyframes moveact{
+	12.5%{ /* go up a bit */
+		bottom: 15%;
+		transform: scaleX(75%) scaleY(120%);
+		border-top: 10px solid red;
+		border-right: 10px solid green;
+		border-left: 10px solid orange;
+		border-bottom: 10px solid blue;
+	}
+	25%{ /* go down and squash */
+		bottom: 0%;
+		transform: scaleX(105%) scaleY(80%);
+		border-top: 10px solid red;
+		border-right: 10px solid green;
+		border-left: 10px solid orange;
+		border-bottom: 10px solid blue;
+	}
+	37.5%{ /* squash a bit more */
+		bottom: 0%;
+		transform: scaleX(110%) scaleY(70%);
+		border-bottom: 10px solid red;
+		border-left: 10px solid green;
+		border-right: 10px solid orange;
+		border-top: 10px solid blue;
+	}
+	50%{ /* temporary normal frame */
+		bottom: 20%;
+		transform: scaleX(100%) scaleY(100%);
+		border-left: 10px solid red;
+		border-top: 10px solid green;
+		border-bottom: 10px solid orange;
+		border-right: 10px solid blue;
+	}
+	62.5%{ /* stretch high */
+		bottom: 30%;
+		transform: scaleX(60%) scaleY(130%);
+		border-top: 10px solid red;
+		border-right: 10px solid green;
+		border-left: 10px solid orange;
+		border-bottom: 10px solid blue;
+	}
+	75%{ /* downward squash */
+		bottom: 0%;
+		transform: scaleX(105%) scaleY(80%);
+		border-top: 10px solid red;
+		border-right: 10px solid green;
+		border-left: 10px solid orange;
+		border-bottom: 10px solid blue;
+	}	
+	87.5%{ /* final side-way squash */ 
+		bottom: -5%;
+		transform: scaleX(120%) scaleY(60%);
+		border-bottom: 10px solid red;
+		border-left: 10px solid green;
+		border-right: 10px solid orange;
+		border-top: 10px solid blue;
+	}
+}
+
+BookReading{
+	font-style: italic;
+	color: blue;
+	font-weight: bold;
+}
+
+VideoMusic{
+	font-style: italic;
+	color: deepskyblue;
+	font-weight: bold;
+}
