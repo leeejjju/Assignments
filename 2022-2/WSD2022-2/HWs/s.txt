@@ -1,0 +1,11 @@
+ <xs:simpleContent>
+    <xs:extension base="xs:string">
+        <xs:attribute name="demartment" type="xs:string"></xs:attribute>
+    </xs:extension>
+</xs:simpleContent>
+
+<xs:attributeGroup name="departmentGroup">
+    <xs:attribute name="department" type="xs:string"></xs:attribute>
+</xs:attributeGroup> 
+
+<xs:attribute ref="departmentGroup"></xs:attribute>

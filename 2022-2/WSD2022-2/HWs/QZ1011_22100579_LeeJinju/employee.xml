@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<employee department="PC">
+    <firstname alias="JhonLittle">John</firstname>
+    <lastname age="20">Smith</lastname>
+</employee>

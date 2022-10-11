@@ -3,6 +3,7 @@
 <xs:element name="car">
   <xs:simpleType>
     <xs:restriction base="xs:string">
+      <xs:whiteSpace value="collapse"/>
       <xs:enumeration value="Audi"/>
       <xs:enumeration value="Golf"/>
       <xs:enumeration value="BMW"/>
