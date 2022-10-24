@@ -1,0 +1,35 @@
+
+<!DOCTYPE factory [
+<!ELEMENT factory (company+)>
+
+<!ELEMENT company (product, item+, export+)>
+<!ATTLIST company name NMTOKENS #REQUIRED>
+<!ATTLIST company location (Gumi|Pohang) #REQUIRED>
+
+<!ELEMENT product (#PCDATA)>
+
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item itemID ID #REQUIRED>
+
+<!ELEMENT export (#PCDATA)>
+<!ATTLIST export exportID IDREFS #REQUIRED>
+
+]>
+
+
+<factory>
+    <company name = "Samsung Semiconductor" location="Gumi">
+      <product> Producing RAM </product> 
+      <item itemID="item1"> Notebook </item>
+      <item itemID="item2"> PC </item>
+      <export exportID="item1 item2"> China </export>
+        
+    </company>
+    <company name = "POSCO Inc" location="Pohang">
+      <product> Rolled Iron Panel </product>
+      <item itemID="door"> Soft Iron </item>
+      <item itemID="pillar"> Mixed Iron </item>    
+      <export exportID="door"> Indonesia </export>   
+      <export exportID="pillar"> Japan </export> 
+    </company>  
+  </factory>

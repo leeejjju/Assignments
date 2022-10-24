@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>hehe</title>
+
+        <script>
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "books.xml", true);
+        xhttp.send();
+
+        function myFunction(xml) {
+            var xmlDoc = xml.responseXML;
+            var root = xmlDoc.documentElement;
+            var currNode = root.childNodes[1];
+
+            var firstBook = document.getElementsByTagName("book")[0];
+            var bookContents = firstBook.childNodes;
+            var txt = "";
+            for(i = 0; i < bookContents.length; i++){
+                txt += (bookContents[i].nodeValue + "<br>");
+            }
+            //removedNode = currNode.removeChild(currNode.childNodes[1]);
+            //document.getElementById("demo").innerHTML =
+            //"Removed node: " + removedNode.nodeName;
+            document.getElementById("aaa").innerHTML = txt;
+        }
+
+        function a(){
+            var t = "Hello world!";
+            document.getElementById("aaa").innerHTML = t;
+            myFunction(this);
+        }
+
+        </script>
+
+    </head>
+
+
+    <body>
+        <h1>this is title blahblah</h1>
+        <p id="aaa">this is contents blahblah</p>
+
+        <button onclick="a()">click me</button>
+
+    </body>
+
+
+</html>

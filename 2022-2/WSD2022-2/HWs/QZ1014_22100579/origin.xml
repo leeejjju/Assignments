@@ -1,0 +1,30 @@
+
+<!DOCTYPE factory [
+<!ELEMENT factory (company+)>
+<!ELEMENT company (product, item+, export+)>
+<!ELEMENT product (#PCDATA)>
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT export (#PCDATA)>
+<!ATTLIST company name CDATA "name">
+<!ATTLIST company location CDATA "location">
+<!ATTLIST item itemID CDATA "itemID">
+<!ATTLIST export exportID CDATA "exportID">
+]>
+
+
+<factory>
+    <company name = "Samsung Semiconductor" location="Gumi">
+      <product> Producing RAM </product> 
+      <item itemID="item1"> Notebook </item>
+      <item itemID="item2"> PC </item>
+      <export exportID="item1 item2"> China </export>
+        
+    </company>
+    <company name = "POSCO Inc" location="Pohang">
+      <product> Rolled Iron Panel </product>
+      <item itemID="door"> Soft Iron </item>
+      <item itemID="pillar"> Mixed Iron </item>    
+      <export exportID="door"> Indonesia </export>   
+      <export exportID="pillar"> Japan </export> 
+    </company>  
+  </factory>

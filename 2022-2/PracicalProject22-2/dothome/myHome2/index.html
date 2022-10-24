@@ -10,47 +10,51 @@
             display: block;
         }
 
-        div#top{
-            background-color: darkolivegreen;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            justify-content: center;
-        }
+
 
         div#wrapper{
-            float: left;
+            display: flex;
             width: 100%;
 
         }
 
-        div#nav, subject, photo{
-            float: left;
+        div#nav, subject, photo, div#bottom, div#top{
             border: 3px solid darkolivegreen;
             border-radius: 10px;
-            margin: 10px;
+            margin: 1%;
+            padding: 1%;
         }
 
-        div#nav{
-            width: 15%;
+        div#top{
+            margin-top: 0;
+            top: 0;
+             background-color: darkolivegreen;
+             color: white;
+         }
 
+        div#nav{
+            float: left;
+            width: 15%;
         }
 
         subject{
             float: left;
-            padding: 10px;
-            width: 60%;
+            width: 56%;
             line-height: 15px;
         }
 
         photo{
+            float: right;
+            display: block;
             width: 15%;
-            right: 0;
-            padding: 10px;
         }
 
         ul{
             list-style-type: none;
+            width: 100%;
+            height: 90%;
+            display: block;
+            padding-inline-start: 0;
         }
 
         a{
@@ -62,10 +66,33 @@
             background-color: wheat;
             color: white;
             border-radius: 5px;
-            padding: 5px;
-            margin: 10px;
-            left: 0;
+            height: 13%;
+            padding: 2%;
+            margin: 3%;
         }
+
+        div#bottom{
+            float: bottom;
+            margin: 1%;
+            padding: 1%;
+            height: 100px;
+            background-color: darkolivegreen;
+        }
+
+        icons{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        tag{
+            color: white;
+            font-size: 15pt;
+            font-weight: bold;
+            margin-top: 60px;
+            margin-right: 10%;
+        }
+
     </style>
 
 </head>
@@ -73,10 +100,11 @@
     <img src="http://pngedits.com/public/uploads/preview/funny-cat-transparent-png-hd-11615994388qvybvgcqtu.png" alt="nyannyan" style="width:450px;height:150px;">
 
     <div id="top">
+        <hr style="color: white">
         <h1>Introduce myself; I am Jinju Lee :)</h1>
-        <p>Student of Handong Global University, Major in CSEE</p>
+        <p>Student of Handong Global University(22100579), Major in CSEE</p>
+        <hr style="color: white">
     </div>
-
 
     <div id="wrapper">
         <div id="nav">
@@ -84,31 +112,47 @@
                 <li><a href="http://leeejjju.dothome.co.kr/myHome2/nostyle.html">noStyle practice</a></li>
                 <li><a href="http://leeejjju.dothome.co.kr/myHome2/style1.html">style1 practice</a></li>
                 <li><a href="http://leeejjju.dothome.co.kr/myHome2/style2.html">style2 practice</a></li>
-
                 <li><a href="http://leeejjju.dothome.co.kr/myHome2/example.html">example practice</a></li>
                 <li><a href="http://leeejjju.dothome.co.kr/myHome2/form.html">form practice</a></li>
+                <li><a href="http://leeejjju.dothome.co.kr/myHome2/form_ok.php">form_ok page</a></li>
+
             </ul>
         </div>
-
         <subject>
-            <h2 style="margin-bottom: 30px;">Taking class: Practical Project (class 02)</h2>
-            <p>Project 03, front-end develop exercise</p>
-            <p>wanna go home blah blah</p>
+            <text style="width: 80%;float: left">
+                <h2 style="margin-bottom: 30px; color: darkolivegreen">Taking class: Practical Project (class 02)</h2>
+                <p>Project 03, front-end develop exercise</p>
+                <p>wanna go home blah blah</p>
+                <p style="color: dimgrey; font-weight: bold; font-size: 180%">°˖✧◝(⁰▿⁰)◜✧˖°</p>
+            </text>
+            <img src="https://assets.petco.com/petco/image/upload/c_pad,dpr_1.0,f_auto,q_auto,h_636,w_636/c_pad,h_636,w_636/905909-Center-1" alt="myPhoto" style="width:20%;height:50%; float: right">
         </subject>
 
         <photo>
-            <img src="https://assets.petco.com/petco/image/upload/c_pad,dpr_1.0,f_auto,q_auto,h_636,w_636/c_pad,h_636,w_636/905909-Center-1" alt="myPhoto" style="width:100%;height:100%;">
-            <p>instead of my photo... ;u;</p>
+            <img src="./src/img1.jpg" alt="myPhoto" style="width:100%;height:80%;">
+            <p style="color: darkolivegreen; font-weight: bold; font-size: 70%;display: block">This is my photo ( ´ ∀ `)ノ</p>
         </photo>
-
     </div>
 
-
-
-
-
     <div id="bottom">
-
+        <icons>
+            <a href="https://www.handong.edu/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/HGU-Emblem-eng2.png" href="" style="width: 80px;height: 80px; margin:10px;">
+            </a>
+            <tag>HGU</tag>
+            <a href="https://csee.handong.edu/">
+                <img src="./src/CSEE2022.png" style="width: 80px;height: 80px; margin:10px; margin-left: 10%">
+            </a>
+            <tag>CSEE</tag>
+            <a href="https://github.com/Global-Handong-Oriented-Security-Team">
+                <img src="./src/GHOST.png" style="width: 80px;height: 80px; margin:10px; margin-left: 10%">
+            </a>
+            <tag>GHOST</tag>
+            <a href="https://earlybirdhg4.wixsite.com/earlybird/hgu">
+                <img src="./src/EarlyBird2022.png" style="width: 80px;height: 80px; margin:10px; margin-left: 10%">
+            </a>
+            <tag>EarlyBird</tag>
+        </icons>
     </div>
 
 </body>

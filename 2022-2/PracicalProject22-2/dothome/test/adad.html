@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add-leeejjju</title>
+
+
+  <script>
+    function add(){
+      var a = document.getElementById("a");
+      var b = document.getElementById("b");
+
+      var sum = parseInt(a.value)+parseInt(b.value);
+
+      var result =document.getElementById("rst");
+      result.value = sum;
+    }
+  </script>
+
+
+</head>
+<body>
+
+<add>
+  <h2>add</h2>
+  <form method="post">
+
+    <input type="text" size="2" name="a" id="a" pattern="\d*">
+    +
+    <input type="text" size="2" name="b" id="b" pattern="\d*">
+    <button onclick="add()">=</button>
+    <input type="text"  size="2" name="rst" id="rst" readonly>
+    <br><br>
+    <input type="reset">
+  </form>
+</add>
+
+</body>
+</html>
