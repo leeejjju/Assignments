@@ -1,0 +1,60 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 4.11: table2.html -->
+<!-- Complex XHTML table. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Tables</title>
+   </head>
+
+   <body>
+      <h1>Table Example Page</h1>
+
+      <table border = "1">
+         <caption>Here is a more complex sample table.</caption>
+
+         <thead>
+            <!-- rowspans and colspans merge the specified -->
+            <!-- number of cells vertically or horizontally -->
+            <tr>
+               <!-- merge two rows -->
+               <th rowspan = "2">
+                  <img src = "camel.gif" width = "205"
+                     height = "167" alt = "Picture of a camel" />
+               </th>
+
+               <!-- merge four columns -->
+               <th colspan = "4">
+                  <h1>Camelid comparison</h1>
+                  <p>Approximate as of 6/2007</p>
+               </th>
+            </tr>
+            <tr>
+               <th># of Humps</th>
+               <th>Indigenous region</th>
+               <th>Spits?</th>
+               <th>Produces Wool?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Camels (bactrian)</th>
+               <td>2</td>
+               <td>Africa/Asia</td>
+               <td>Yes</td>
+               <td>Yes</td>
+            </tr>
+            <tr>
+               <th>Llamas</th>
+               <td>1</td>
+               <td>Andes Mountains</td>
+               <td>Yes</td>
+               <td>Yes</td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
+

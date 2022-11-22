@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+   <head>
+      <title>Flowing Text Around Floating Elements</title>
+
+      <style type = "text/css">
+
+         div { background-color: #ffccff;
+               margin-bottom: .5em;
+               font-size: 1.5em;
+               width: 50%;
+               display: block;
+            }
+
+         p   { text-align: justify }
+
+         #title{
+            width: 100%;
+            text-align: center;
+            background-color: cyan;
+            font-weight: 1000;
+            text-shadow: 2px 2px yellow;
+         }
+
+         .linkto{
+            font-size: small;
+         }
+
+         #top{
+            width: 100%;
+            margin: 10px;
+            display: block;
+         }
+
+         greenbox{
+            display: block;
+            text-align: right;
+            font-size:large;
+            background-color: rgb(47, 255, 85);
+            padding: 20px;
+            border: 3px solid;
+            margin: 20px;
+            width: 30%;
+         }
+
+         greenbox:hover a{display: block;}
+
+         #top-left{
+            display: block;
+            width: 60%;
+            font-size: medium;
+            left: 0;
+         }
+         
+         .dark{
+            font-weight: 1000;
+            font-size: larger;
+            color: #8a0c6f;
+         }
+
+         #bottom{
+            width: 100%;
+            font-size: medium;
+         }
+
+         #bottom-right{
+            background-color: #ffccff;
+               margin-bottom: .5em;
+               font-size: 1.5em;
+               width: 50%;
+               display: block;
+         }
+
+         skybox{
+            float: right;
+            text-align: left;
+            display: block;
+            background-color: rgb(185, 220, 233);
+            border: 3px solid red;
+            padding: 30px;
+            margin: 20px;
+            width: 30%;
+            
+         }
+
+         skybox:hover a2{
+            display: block;
+         }
+
+         .yellow{
+            background-color: yellow;
+            text-decoration:line-through;
+            font-size: larger;
+         }
+
+         #bottom-left{
+            width: 60%;
+         }
+
+         #italic{ 
+            display: block;
+            font-style: italic;
+            font-weight: 500;
+            bottom: 0;
+         }
+
+         #mini{
+            top: 0;
+            display: block;
+            clear: right;
+            font-size: medium;
+         }
+
+         .green{
+            color: rgb(37, 146, 84);
+            background-color: skyblue;
+            font-weight: 500;
+         }
+
+         .green :hover{
+            color: yellow;
+            background-color: darkblue;
+            text-decoration: wavy;
+         }
+
+         a{
+            display: none;
+            border: 2px solid;
+            background-color: rgb(195, 195, 195);
+            margin: 20px;
+            padding: 20px;
+         }
+
+         a2{
+            display: none;
+            border: 2px solid blue;
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+         }
+
+         ul{
+            font-size: medium;
+         }
+
+
+      </style>
+
+   </head>
+
+   <body>
+
+      <div id=title>
+         Deitel &amp; Associates, Inc. <span class="linkto" herf="#"> Click for Contact</span> </div>
+
+      <div id="top">
+         <greenbox>
+         Corporate Training and Publishing</greenbox>
+
+         <p id="top-left">Deitel &amp; Associates, Inc. is an internationally
+         recognized corporate training and publishing organization
+         specializing in programming languages, Internet/World
+         Wide Web technology and object technology education.
+         The company provides courses on <span class="dark">Java, C++,</span> Visual Basic, C,
+         Internet and World Wide Web programming, and Object Technology.</p>
+      </div>
+      
+      <div id="bottom">
+
+
+         <div id="bottom-right">
+
+            <skybox>
+               Leading-Edge Programming Textbooks <hr>The company's clients include many <span class="yellow">Fortune 1000</span> 
+               companies, government agencies, branches of the military
+               and business organizations.
+            </skybox>
+
+            <a2>
+               <span class="bold"> Techniques Covered</span>
+               <ul>
+                  <li>XML</li>
+                  <li>HTML5
+                     <ul>
+                        <li>1. Semantic Tags</li>
+                        <li>2. Java Script</li>
+                        <li>3. CSS3</li>
+                     </ul>
+                  </li>
+                  <li>DOM</li>
+                  <li>Php</li>
+                  <li>MySQL</li>
+               </ul>
+
+            </a2>
+         </div>
+         
+
+
+         <div id="bottom-left">
+
+            <p id="italic">The company's clients include many Fortune 1000
+            companies, government agencies, branches of the military
+            and business organizations.</p>
+
+            <p id="mini">Through its publishing
+             with <span class="green">Prentice Hall </span>, Deitel &amp; Associates,
+            Inc. publishes leading-edge programming textbooks,
+            professional books, interactive CD-ROM-based multimedia
+            Cyber Classrooms, satellite courses and World Wide Web
+            courses.</p>
+
+            <a>
+               <span class="bold"> On-Line Learning</span>
+               <ul>
+                  <li>C++</li>
+                  <li>Python Django</li>
+                  <li>JavaScript Web Development</li>
+               </ul>
+            </a>
+
+            
+            
+         </div>
+
+
+         
+
+         
+      </div>
+
+      
+
+   </body>
+</html>
