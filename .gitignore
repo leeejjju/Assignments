@@ -1,9 +1,10 @@
 #other git repository
 2022-2/PracicalProject22-2/
 2022-2/PracicalProject/
+2023-1/DatabaseSystem/
 
-
-
+#tmp file
+*.swp
 
 # Prerequisites
 *.d
