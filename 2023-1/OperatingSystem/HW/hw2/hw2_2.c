@@ -64,7 +64,7 @@ int main()
 		while((ent = readdir(dir)) != NULL){
 	// 		get the file state using stat()
 			struct stat buf;
-			lstat(ent->d_name, &buf);	
+			lstat(ent->d_name, &buf);
 	//		convert the modified time into struct tm
 			struct tm* t = localtime(&buf.st_mtime);
 	//		display

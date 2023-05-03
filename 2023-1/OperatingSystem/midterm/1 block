@@ -1,0 +1,38 @@
+	// Algorithm)
+	//	repeat until the user types "quit"
+	// 		read an integer expression as a string (e.g., "5+3", "7 * 5", etc.) - use fgets()
+	// 		if the input is not an empty string,
+	// 			send the expression to the child through the message queue p2c.
+	// 				on failure, display an error message.
+	//			for debug, display the return value of msgsnd().
+	// 			if the input string is "quit", break the loop.
+	// 			receive the result of the expression from the child through the message queue c2p.
+	//				on failure, display an error message.
+	//			for debug, display the return value of msgrcv().
+	// 			display the expression and the result from the child.
+	// 			increase the index of the outgoing message.
+	//
+	//	destroy the two message queues.
+	//	display a message indicating that the parent is terminating.
+
+	int rst;
+
+	while(1){
+		printf("[parent] Input an integer binary expressions(type \"quit\" to finish.):");
+		fgets(out_msg.content, MAX_LEN, stdin); //get message from user
+		out_msg.content[strlen(out_msg.content)-1] = 0;
+
+		if(strlen(out_msg.content) > 0){
+			//send the expressiono to chile through mesage queue p2c
+			if((rst = msgsnd(p2c, &out_msg, msg_size, 0)) == -1) printf("[parent] error: cannot send the message to child.\n");
+			printf("[parent] msgsnd() returned = %d\n", rst);
+			
+			if(!strcmp(out_msg.content, "quit")) break;
+
+			//receive the result from child through message queue c2p
+			if((rst = msgrcv(c2p, &in_msg, msg_size, 0, 0)) == -1) printf("[parent] error: cannot receive the message from child.\n");
+			printf("[parent] msgrcv() returned = %d\n", rst);
+			printf("[parent] %s = %s\n", out_msg.content, in_msg.content);
+			out_msg.index++;
+		}
+	}
