@@ -13,8 +13,7 @@
 		1234 ==> one two three four
 		Input a number: 872
 		872 ==> eight seven two
-		Input a number: 1004
-		1004 ==> one zero zero four
+		Input a number: 1004 1004 ==> one zero zero four
 		Input a number: 1829401
 		1829401 ==> one eight two nine four zero one
 		Input a number: quit
@@ -48,28 +47,29 @@ int main(int argc, char *argv[])
 
 	// TO DO: create a socket
 	//  on failure, display an error message and terminate
-
-
-
-
+	int sockfd;
+	if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0){
+		printf("error: cannot create socket.\n");
+		exit(-1);
+	}
 
 
 	printf("Connecting to %s:%d\n", server_ip, server_port);
 
 	struct sockaddr_in svr_addr = { 0 };
 	// TO DO: set svr_addr with appropriate values
-
-
-
+	memset(&svr_addr, 0, sizeof(svr_addr));
+	svr_addr.sin_family = AF_INET;
+	svr_addr.sin_addr.s_addr = inet_addr(server_ip);
+	svr_addr.sin_port = htons(server_port);
 
 
 	// TO DO: connect to svr_addr using the socket
 	//  on failure, display an error message and terminate
-
-
-
-
-
+	if(connect(sockfd, (struct sockaddr*)&svr_addr, sizeof(svr_addr)) == 1){
+		printf("error: cannot connect to sever.\n");
+		exit(-1);
+	}
 
 	printf("Done.\n");
 
@@ -80,23 +80,28 @@ int main(int argc, char *argv[])
 		display the input string and the conversion result
 		if the conversion result is an empty string, break
 	*/
+	char input[BUFFER_SIZE] = "";
+	char output[BUFFER_SIZE] = "";
+	while(1){
+		printf("Input a number:");
+		fgets(input, BUFFER_SIZE, stdin);
+		input[strlen(input)-1] = 0;
+		write(sockfd, input, strlen(input)+1);
+		
+		read(sockfd, output, BUFFER_SIZE);
+		
+		printf("%s ==> %s\n", input, output);
 
+		if(strlen(output) == 0) break;
 
-
-
-
-
-
+	}
 
 	printf("Closing socket\n");
 
 	// TO DO: close the socket
-
-
-
+	close(sockfd);
 
 	printf("Done.\n");
-
 	printf("Bye!\n");
 
 	return 0;

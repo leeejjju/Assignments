@@ -1,8 +1,9 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <string.h>
 
 int main(void){
-    cout << "Hello";
 
-    return 0;
+    printf("%d", '8' - '0');
+
+
 }
