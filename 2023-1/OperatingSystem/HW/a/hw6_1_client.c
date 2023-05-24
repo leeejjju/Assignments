@@ -1,29 +1,3 @@
-/*
-	socket_client.c: reads digit strings from the user
-		and converts it into the corresponding alphabet string using socket_server.
-		communicate with socket_client through SOCKET
-		e.g., "135246" --> "one three five two four six"
-
-		try to make the output as similar to the following example as possible
-
-	Example) ./socket_client 127.0.0.1 1234 4321
-		Connecting to 127.0.0.1:1234
-		Done.
-		Input a number: 1234
-		1234 ==> one two three four
-		Input a number: 872
-		872 ==> eight seven two
-		Input a number: 1004 1004 ==> one zero zero four
-		Input a number: 1829401
-		1829401 ==> one eight two nine four zero one
-		Input a number: quit
-		quit ==>
-		Closing sockets
-		Done.
-
-
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,6 +9,7 @@
 
 #define BUFFER_SIZE 256
 
+//My previous solution was perfect, so I didn't modify it!
 int main(int argc, char *argv[])
 {
 	if(argc < 2){

@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-// converts a digit string into the corresponding alphabet string
+//My previous solution was perfect, so I didn't modify it!
 void Digit2Text(char *digit_string, char *alphabet_str);
 
 int main(int argc, char *argv[])
@@ -106,17 +106,17 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
-void Digit2Text(char *digit_str, char *alphabet_str)
-{
+void Digit2Text(char *digit_str, char *alphabet_str){
 	static char digit_name[][16] = {
 		"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
 	};
+
 
 	if(strlen(digit_str) <= 0){
 		strcpy(alphabet_str, "");
 		return;
 	}
-
+	
 	for(int i = 0; i < strlen(digit_str); i++){
 		if(isdigit(digit_str[i])){
 			strcat(alphabet_str, digit_name[digit_str[i] - '0']);

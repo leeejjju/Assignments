@@ -9,6 +9,7 @@
 
 #define BUFFER_SIZE 256
 
+//My previous solution was perfect, so I didn't modify it!
 int main(int argc, char *argv[])
 {
 	if(argc < 2){
