@@ -5,10 +5,11 @@
 
 using namespace std;
 
+
 typedef struct g_node {
-    int city;
-	int distance;    
-    struct g_node *link;   
+    int city; //이건뭐야 출발지?
+	int distance;  //엣지인가 그게...? 
+    struct g_node *link;   //다음으로 향하는 링크
 } list_node;
 
 typedef struct h_node {
@@ -75,15 +76,16 @@ void Display_Lists(head_node *my_graph){
 	}
 }
 
-int main()
-{
+int main(){
     head_node *my_graph=NULL;
 	int distance[num_nodes][num_nodes];
 	
 	// Create array
+    printf("#create array\n");
 	Create_array(&my_graph);
 	
 	// Print array
+    printf("#Print array\n");
 	for (int i=0; i<num_nodes; i++){
 		cout << i << ": ";
 		cout << my_graph[i].data << ", ";
@@ -92,12 +94,15 @@ int main()
 	cout << endl;
 	
 	//Read data from file
+    printf("#Read data from file\n");
 	Read_from_file(distance);
 
 	// Create list
+    printf("#Create list\n");
 	Insert(distance, my_graph);
     
     // Display
+    printf("#Display\n");
     Display_Lists(my_graph);		
 }
 

@@ -177,10 +177,11 @@ int main(int argc, char *argv[])
 
 	sleep(1);
 
-	// TODO: Find out the reason why the following code is necessary.
+	// TO DO: Find out the reason why the following code is necessary.
+	// answer: due to delay gap, one side must wating infinitely to waked up by other(already finished). so we need to help them to terminate safely. 
 	char dummy[MAX_LEN] = "Dummy";
-	if(sb.count == 0){
-		printf("[main] Inserting a dummy string to signal the consumer.\n");
+	if(sb.count == 0){ //know who is wating by checking sb.count. ==0 means consumer is wating and !=0 means proeucer is wating. 
+		printf("[main] Inserting a dummy string to signal the consumer.\n"); //for the wating one, artifitially wake up him. 
 		StringBuffer_Insert(&sb, dummy);
 		sem_post(&full);
 	} else {
