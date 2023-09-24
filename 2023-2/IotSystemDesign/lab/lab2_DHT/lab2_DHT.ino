@@ -2,7 +2,7 @@
 #define D2 4
 #define DHPIN D2
 #define DHTTYPE DHTesp::DHT22
-#include "DHTesp.h" // Click here to get the library: http://librarymanager/All#DHTesp
+#include "DHTesp.h"
 //week 1-2
 //temperature sensing
 
