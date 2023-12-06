@@ -1,0 +1,78 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+#automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+lovelace:
+  #mode: yaml
+  mode: storage
+
+automation:
+  - alias: 'automation feed: morning'
+    trigger:
+      platform: time 
+      at: "07:00:00"
+    action:
+      - service: mqtt.publish
+        data: 
+          topic: "iot/22100579"
+          payload: "feed"
+  - alias: 'automation feed: lunch'
+    trigger:
+      platform: time 
+      at: "12:00:00"
+    action:
+      - service: mqtt.publish
+        data: 
+          topic: "iot/22100579"
+          payload: "feed"
+  - alias: 'automation feed: dinner'
+    trigger:
+      platform: time 
+      at: "19:00:00"
+    action:
+      - service: mqtt.publish
+        data: 
+          topic: "iot/22100579"
+          payload: "feed"
+
+homeassistant:
+  name: myHome
+
+mqtt:
+  sensor:
+    - state_topic: "iot/22100579/last_feed"
+      name: Last_feed_day
+      value_template: "{{ value_json.Day }}"
+    - state_topic: "iot/22100579/last_feed"
+      name: Last_feed_time
+      value_template: "{{ value_json.Time }}"
+
+  button:
+    - name: FEED
+      command_topic: "iot/22100579"
+      qos: 0
+      payload_press: "feed"
+      retain: false
+ 
+group:
+  state:
+    name: "My Home"
+    entities:
+      - sensor.Last_feed_day
+      - sensor.Last_feed_time
+  btn:
+    name: "FEED"
+    entities:
+      - button.FEED
+
+
+
+
+

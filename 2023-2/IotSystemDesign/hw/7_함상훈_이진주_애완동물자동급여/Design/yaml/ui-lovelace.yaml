@@ -1,0 +1,47 @@
+title: myHome
+views:
+  - path: myView
+    title: myHome
+    badges: []
+    cards:
+      - show_state: true
+        show_name: true
+        camera_view: auto
+        type: picture-entity
+        entity: camera.esp32_cam_my_cam
+        camera_image: camera.esp32_cam_my_cam
+      - type: entities
+        entities:
+          - entity: automation.automation_feed_morning
+          - entity: automation.automation_feed_lunch
+          - entity: automation.automation_feed_dinner
+        title: Control
+        state_color: true
+      - type: entities
+        entities:
+          - entity: sensor.last_feed_day
+            icon: mdi:calendar-today
+          - entity: sensor.last_feed_time
+            icon: mdi:clock-time-eight-outline
+        title: My Home
+        show_header_toggle: false
+      - type: picture
+        image: >-
+          https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=0.670xw:1.00xh;0.167xw,0&resize=640:*
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: switch.esp32_cam_my_cam_flash
+        icon: mdi:alarm-light-outline
+        show_state: true
+        name: Light
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: button.feed
+        icon: mdi:food-drumstick
+        show_state: false
