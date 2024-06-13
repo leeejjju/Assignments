@@ -51,8 +51,8 @@ int main(){
     int size = makeStringSimple(&input);
 
     //palindrom인지 판별
-    if(isPalindrom(input, size)) cout << "Yes, it’s a palindrome.";
-    else cout << "No, It’s not a palindrom.";
+    if(isPalindrom(input, size)) cout << "Yes, it's a palindrome.";
+    else cout << "No, It's not a palindrom.";
 
     return 0;
 }

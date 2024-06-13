@@ -45,7 +45,6 @@ int main(){
     cin >> input; 
     
 
-
     for (i = 0; i < input.size(); i++ ){ //스택에 배열 속 원소 차례대로 밀어넣기 
 
       if(isBracket(input[i]) == 1){ //여는괄호는 스택에 넣기 
@@ -59,7 +58,7 @@ int main(){
           char temp = s.pop(input[i]);
           if(temp == 'N') return 0;
           else {
-            printf("Error: mis-matched parenthesis, ‘%c’ is expected.", findExpextedOne(temp));
+            printf("Error: mis-matched parenthesis, '%c' is expected.", findExpextedOne(temp));
           }
           return 0;
         }
@@ -68,14 +67,14 @@ int main(){
   
 
     while ( ! s.stack_empty()){ //스택에 남은거 있남. 있으면 에러 출력     
-      printf("Error: An extra parenthesis ‘%c’ is founded.", s.pop(input[i]));
+      printf("Error: An extra parenthesis '%c' is founded.", s.pop(input[i]));
       return 0;
     }
   //(i >= input.size()) ? 'a' : input[i]
         
 
     //여기까지 문제 없이 왔으면 성공 출력 
-    cout << "It’s a normal expression.";
+    cout << "It's a normal expression.";
 
     return 0;
 }
@@ -98,7 +97,7 @@ char mystack:: pop(char in){
         top--; //대기인덱스 한칸 뒤로 물려서 젤 최근에 들어온놈을 가리키게 하고 
         return s[top]; //그놈 뱉기
     }else{
-        printf("Error: An extra parenthesis ‘%c’ is founded.", in);
+        printf("Error: An extra parenthesis '%c' is founded.", in);
         return 'N';
     }
   

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-//데이타구조 1주차2 과제 
+//????????? 1????2 ???? 
 
 
-void my_sort(int list[], int num); //리스트를 받아와 정렬함
-void swap(int* a, int* b); //두개의 정수를 교체  
+void my_sort(int list[], int num); //??????? ???? ??????
+void swap(int* a, int* b); //????? ?????? ???  
 
 
 int main(){
@@ -13,8 +13,8 @@ int main(){
 	int list[10] = {23, 11, 15, 8, 17, 33, 7, 14, 19, 21};
 	int i;
 	
-	my_sort(list, 10); //배열 list의 원소 10개를 sort하는 함수 
-	for(i = 0; i < 10; i++){ //화면상에 결과 출력  
+	my_sort(list, 10); //?迭 list?? ???? 10???? sort??? ??? 
+	for(i = 0; i < 10; i++){ //???? ??? ???  
 		cout << list[i] << "\n";
 	}
 	
@@ -28,7 +28,7 @@ void my_sort(int list[], int num){
 	
 	//bubble sort
 	for(i = 0; i < num; i++){ 
-		for(j = 0; j < num-i; j++){ //max를 깎아나가며  
+		for(j = 0; j < num-i; j++){ //max?? ????????  
 			if(j+1 < num-i && list[j] > list[j+1]){
 				swap(&list[j], &list[j+1]);
 			}
@@ -37,11 +37,11 @@ void my_sort(int list[], int num){
 	
 	/*
 	//selection sort
-	int min = 0; //최소값의 인덱스 
+	int min = 0; //?????? ?ε??? 
 	
 	for(i = 0; i < num; i++){ 
 		min = i;
-		for(j = i; j < num; j++){ //min을 채워나가며  
+		for(j = i; j < num; j++){ //min?? ?????????  
 			if(list[j] < list[min]) min = j;
 		}
 		swap(list[i], list[min]);

@@ -83,7 +83,7 @@ int main(){
     a.add_to_head(tmp);            
 
     cout << a.num_nodes()<< " : " << a.score_sum() << "\n"; // 4단계 점검
-    cout << "Park’s score : " << a.get_score("Park")<< "\n";  
+    cout << "Park's score : " << a.get_score("Park")<< "\n";  
     JUMGUM
 
     if ( a.remove_a_node("Kim") == 1) cout << "Kim is deleted from the list. \n";     // 5단계 점검
